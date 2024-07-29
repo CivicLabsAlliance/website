@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', (event) => {
+document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('contactForm').addEventListener('submit', function(event) {
         event.preventDefault();
 
@@ -7,6 +7,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
         const organization = document.getElementById('organization').value;
         const message = document.getElementById('message').value;
 
+        // Add debug logging to assist tracking the problem
+        console.log('Form Data:', { name, email, organization, message });
+
         const data = {
             name: name,
             email: email,
@@ -14,7 +17,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
             message: message
         };
 
-        const url = 'https://script.google.com/macros/s/AKfycbzdBH8eBNq6SgJFDbP-2J__r9ESAv1cWudWt50dMVSf9vgWiBgCR1bjpC5ckxPUBMpo3Q/exec';
+        const url = 'https://script.google.com/macros/s/AKfycbyNMEMTwgs7-S2z-sJupbFw369mLAdjEDokF2uze8VYt2jJH3MTiqq73mor4hA9qzQoHA/exec';
 
         fetch(url, {
             method: 'POST',
@@ -23,8 +26,12 @@ document.addEventListener('DOMContentLoaded', (event) => {
             },
             body: JSON.stringify(data)
         })
-        .then(response => response.text())
+        .then(response => {
+            console.log('Fetch Response:', response);
+            return response.text();
+        })
         .then(data => {
+            console.log('Response Data:', data);
             alert('Form submitted successfully!');
         })
         .catch(error => {
