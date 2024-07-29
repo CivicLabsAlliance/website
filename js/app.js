@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
             message: message
         };
 
-        const url = 'https://script.google.com/macros/s/AKfycbwjrDaH5Frcd8oyte7Cp265iuy27fO3cSuW3tf-Tkee0_5CU9PLEZxOd8CxyRYnlHoMpw/exec';
+        const url = 'https://script.google.com/macros/s/AKfycbw68tPyt3h8zI8KFyElUmsEmPhRwlrOJJU9nJgTqvguQU8tK7T8q7m97CMszNY5DloXdw/exec';
 
         fetch(url, {
             method: 'POST',
