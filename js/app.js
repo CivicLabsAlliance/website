@@ -7,7 +7,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const organization = document.getElementById('organization').value;
         const message = document.getElementById('message').value;
 
-        // Add debug logging to assist tracking the problem
         console.log('Form Data:', { name, email, organization, message });
 
         const data = {
@@ -17,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
             message: message
         };
 
-        const url = 'https://script.google.com/macros/s/AKfycbyNMEMTwgs7-S2z-sJupbFw369mLAdjEDokF2uze8VYt2jJH3MTiqq73mor4hA9qzQoHA/exec';
+        const url = 'https://script.google.com/macros/s/AKfycbwjrDaH5Frcd8oyte7Cp265iuy27fO3cSuW3tf-Tkee0_5CU9PLEZxOd8CxyRYnlHoMpw/exec';
 
         fetch(url, {
             method: 'POST',
@@ -28,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
         })
         .then(response => {
             console.log('Fetch Response:', response);
-            return response.text();
+            return response.json();
         })
         .then(data => {
             console.log('Response Data:', data);
