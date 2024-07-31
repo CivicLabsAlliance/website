@@ -411,21 +411,41 @@ header .logo {
 
 /* Responsive Styles */
 @media (max-width: 768px) {
+
   .business-details {
     flex-direction: column;
     align-items: flex-start;
-
+    margin: 1em 0; /* Optional: for additional spacing on mobile */
   }
 
   .business-details .logo-column {
     display: flex;
-    align-items: center;
-    margin-bottom: 0em;
+    flex-direction: column;
+    align-items: center; /* Center the logo */
+    width: 100%; /* Take full width on mobile */
+    text-align: center; /* Center text below logo */
   }
 
   .business-details .logo-column img {
-    max-width: 130px; /* Adjust size as needed */
-    margin-right: 1em; /* Space between logo and text */
+    max-width: 150px; /* Adjust size as needed */
+    margin-bottom: 1em; /* Space between logo and text */
+  }
+
+  .business-details .column:nth-of-type(2) {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the text */
+    justify-content: center; /* Center text vertically */
+    margin-bottom: 1em; /* Space between text and logo */
+    text-align: center; /* Center align the sentence */
+  }
+
+  .business-details .column:nth-of-type(3) {
+    order: 3; /* Ensure the list items are at the bottom */
+    width: 100%; /* Make it full width */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the list items */
   }
 
   .business-details .column {
@@ -436,7 +456,10 @@ header .logo {
   .business-details ul {
     display: flex;
     flex-direction: column;
-    padding-bottom: 10px;
+    align-items: left; /* Center the list items */
+    padding: 0;
+    margin: 0;
+    text-align: left; /* Keep list items text left-aligned */
   }
 
   .business-details ul li {
@@ -444,12 +467,8 @@ header .logo {
     color: var(--color-white);
   }
 
-  .business-details {
-    flex-direction: column;
-  }
-
-  .business-details .column {
-    margin: 1em 0;
+  .business-details ul li strong {
+    color: var(--color-light-green); /* Highlighted text */
   }
 }
 
@@ -518,66 +537,53 @@ header .logo {
   border-bottom-color: var(--color-light-yellow);
 }
 
-/* Responsive Styles */
+/* Responsive Styles for Mobile */
 @media (max-width: 768px) {
 
-  .business-details {
+  .leader {
     flex-direction: column;
-    align-items: flex-start;
-    margin: 1em 0; /* Optional: for additional spacing on mobile */
+    text-align: center;
   }
 
-  .business-details .logo-column {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center the logo */
-    width: 100%; /* Take full width on mobile */
-    text-align: center; /* Center text below logo */
+  .leader-img {
+    flex: none;
+    width: 100%;
+    max-width: 150px; /* Adjust image width for mobile */
+    margin: 0 auto 1em; /* Center image and add bottom margin */
   }
 
-  .business-details .logo-column img {
-    max-width: 150px; /* Adjust size as needed */
-    margin-bottom: 1em; /* Space between logo and text */
+  .image-person {
+    width: 100%; /* Ensure image does not exceed container width */
+    height: auto;
+    border-radius: 8px; /* Ensure round corners */
   }
 
-  .business-details .column:nth-of-type(2) {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center the text */
-    justify-content: center; /* Center text vertically */
-    margin-bottom: 1em; /* Space between text and logo */
-    text-align: center; /* Center align the sentence */
+  .leader h4 {
+    margin: 0.5em 0; /* Add top margin */
+    font-size: 1.2rem; /* Slightly larger font size for better readability */
   }
 
-  .business-details .column:nth-of-type(3) {
-    order: 3; /* Ensure the list items are at the bottom */
-    width: 100%; /* Make it full width */
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center the list items */
+  .leader p {
+    font-size: 1rem; /* Adjust font size for readability */
+    margin-bottom: 1.5em; /* Add space below each leader's info */
+    text-align: justify; /* Justify text for better alignment */
   }
 
-  .business-details .column {
-    flex: initial;
-    margin: 0.5em 0;
+  .leader p:nth-of-type(1) {
+    margin-top: 0.5em; /* Add space above titles */
+    text-align: center;
   }
 
-  .business-details ul {
-    display: flex;
-    flex-direction: column;
-    align-items: left; /* Center the list items */
-    padding: 0;
-    margin: 0;
-    text-align: left; /* Keep list items text left-aligned */
+  .link {
+    color: var(--color-light-green);
+    text-decoration: none;
+    border-bottom: 1px solid var(--color-light-green);
+    transition: color 0.3s, border-bottom-color 0.3s;
   }
 
-  .business-details ul li {
-    margin: 0.25em 0;
-    color: var(--color-white);
-  }
-
-  .business-details ul li strong {
-    color: var(--color-light-green); /* Highlighted text */
+  .link:hover {
+    color: var(--color-light-yellow);
+    border-bottom-color: var(--color-light-yellow);
   }
 }
 
