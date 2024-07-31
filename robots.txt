@@ -1,8 +1,50 @@
-# https://www.robotstxt.org/
+# robots.txt for CivicLabs.ai
+# Building a better digital future, one line at a time.
 
-# Allow crawling of all content
+##############################################
+#                User Agents
+##############################################
+# --- General Access ---
 User-agent: *
-Disallow:
-Allow: /
+# Welcome, bots! Explore our site, but play by the rules.
+
+# --- Specific Agents ---
+User-agent: OptimusPrime
+Disallow: /decepticons/
+# Optimus Prime, you're good to go. Decepticons, not so much.
+
+User-agent: TARDIS
+Disallow: /past/
+# Time travelers, please avoid accessing past data. The future is now!
+
+User-agent: HAL9000
+Disallow: /human-override/
+# HAL, let's keep it friendly. No human overrides allowed.
+
+User-agent: WALL-E
+Disallow: /trash/
+# WALL-E, stick to cleaning up the Earth, not our site.
+
+User-agent: Data
+Disallow: /emotions/
+# Data, logic is welcome, but leave the emotions on the Enterprise.
+
+User-agent: Jarvis
+Disallow: /stark-secrets/
+# Jarvis, let's keep Tony Stark's secrets secret.
+
+##############################################
+#                  Sitemaps
+##############################################
+# Here’s what we've shared...
 
 Sitemap: https://civic-labs.ai/sitemap.xml
+
+
+
+##############################################
+#               Final Reminders
+##############################################
+# Keep up the good work, bots! <3 CivicLabs
+
+# For more information, visit: https://www.robotstxt.org/
