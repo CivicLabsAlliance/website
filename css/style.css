@@ -21,7 +21,6 @@
 /* ---------------------------------------------------------- */
 
 :root {
-
   /* Color Variables */
   --color-white: #FFFFFF;
   --color-light-black: #1F2624;
@@ -77,7 +76,6 @@ body {
   border-bottom-color: var(--color-light-green);
 }
 
-
 /* Headers */
 
 h2 {
@@ -94,7 +92,6 @@ h3 {
   text-align: left;
   font-size: var(--font-size-h3);
   margin-bottom: 0.25em;
-
 }
 
 h4 {
@@ -102,7 +99,6 @@ h4 {
   color: var(--color-white);
   font-size: var(--font-size-h4);
 }
-
 
 /* Text Stuff */
 p {
@@ -121,10 +117,6 @@ ul li {
   color: var(--color-white);
 }
 
-
-
-
-
 /* Site width and stuff */
 .wrapper {
   max-width: 80%; /* Adjust percentage as needed */
@@ -141,14 +133,6 @@ section {
   max-width: 1000px; /* Ensure content boxes are not too wide */
   margin: 0 auto; /* Center the content */
 }
-
-
-
-
-
-
-
-
 
 /* 3. Header
 /* ---------------------------------------------------------- */
@@ -177,8 +161,6 @@ header .logo {
   z-index: 1;
 }
 
-
-
 /* Button */
 .transparent-button {
   position: relative;
@@ -201,8 +183,6 @@ header .logo {
   background-color: var(--color-light-yellow);
   color: var(--color-dark-green);
 }
-
-
 
 /* 4. About
 /* ---------------------------------------------------------- */
@@ -243,7 +223,6 @@ header .logo {
 
 .about .logos .logo-huntridge {
   width: 40%;
-
 }
 
 .about .logos .logo-civicactions {
@@ -251,7 +230,68 @@ header .logo {
   margin-top: 10px;
 }
 
+/* Responsive Styles */
 
+@media (max-width: 768px) {
+  .about {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about p {
+    max-width: 100%;
+    margin-bottom: 2em;
+  }
+
+  .about .logos {
+    margin-left: 0;
+  }
+
+  .section {
+    padding: 2em 1em;
+  }
+
+  header {
+    padding: 5em 0;
+  }
+
+  .wrapper {
+    max-width: 90%;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  h4 {
+    font-size: 1rem;
+  }
+
+  .capability-column {
+    flex-direction: column;
+  }
+
+  .business-details {
+    flex-direction: column;
+  }
+
+  .leader {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .leader-img {
+    margin-bottom: 1em;
+  }
+
+  .business-details .column {
+    margin: 1em 0;
+  }
+}
 
 /* 4.2 Capabilities
 /* ---------------------------------------------------------- */
@@ -271,11 +311,9 @@ header .logo {
   margin-bottom: 15px;
 }
 
-
-
 .capability-column {
   display: flex;
-  justify-content: : space-between;
+  justify-content: space-between;
 }
 
 .capability {
@@ -299,8 +337,6 @@ header .logo {
   color: var(--color-white);
   font-size: var(--font-size-body);
 }
-
-
 
 /* 5. Business Details
 /* ---------------------------------------------------------- */
@@ -434,10 +470,9 @@ header .logo {
   border-radius: 4px;
   font-size: 1em;
   background-color: var(--color-dark-green);
-  color: var(--color-white);
+  color: var (--color-white);
   font-family: var(--font-family-text);
 }
-
 
 .contact form button {
   background-color: transparent;
@@ -481,8 +516,6 @@ footer img {
 footer p {
   margin: 0.5em 0;
 }
-
-
 
 /* 9. Views
 /* ---------------------------------------------------------- */
