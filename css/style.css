@@ -135,6 +135,7 @@ section {
 
 }
 
+/* Responsive Styles */
 @media (max-width: 768px) {
 
   .section {
@@ -147,6 +148,7 @@ section {
 
   .wrapper {
     max-width: 90%;
+    padding: 24px;
   }
 
   h2 {
@@ -161,15 +163,11 @@ section {
     font-size: 1rem;
   }
 
-  .capability-column {
-    flex-direction: column;
-  }
+
 
   .business-details {
     flex-direction: column;
   }
-
-
 
   .business-details .column {
     margin: 1em 0;
@@ -225,6 +223,12 @@ header .logo {
 .transparent-button:hover {
   background-color: var(--color-light-yellow);
   color: var(--color-dark-green);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+
+
 }
 
 /* 4. About
@@ -356,6 +360,9 @@ header .logo {
 /* Responsive Styles */
 @media (max-width: 768px) {
 
+   .capability-column {
+    flex-direction: column;
+  }
 
 }
 
@@ -407,6 +414,7 @@ header .logo {
   .business-details {
     flex-direction: column;
     align-items: flex-start;
+
   }
 
   .business-details .logo-column {
@@ -435,6 +443,14 @@ header .logo {
     margin: 0.25em 0;
     color: var(--color-white);
   }
+
+  .business-details {
+    flex-direction: column;
+  }
+
+  .business-details .column {
+    margin: 1em 0;
+  }
 }
 
 
@@ -447,6 +463,7 @@ header .logo {
   border-radius: 8px;
   max-width: 1000px;
   margin: 0 auto;
+
 }
 
 .leadership h3 {
@@ -486,6 +503,7 @@ header .logo {
 .leader p {
   color: var(--color-white);
   margin-bottom: 1em;
+  text-align: justify;
 }
 
 .link {
@@ -502,13 +520,64 @@ header .logo {
 
 /* Responsive Styles */
 @media (max-width: 768px) {
-  .leader {
+
+  .business-details {
     flex-direction: column;
-    text-align: center;
+    align-items: flex-start;
+    margin: 1em 0; /* Optional: for additional spacing on mobile */
   }
 
-  .leader-img {
-    margin-bottom: 1em;
+  .business-details .logo-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the logo */
+    width: 100%; /* Take full width on mobile */
+    text-align: center; /* Center text below logo */
+  }
+
+  .business-details .logo-column img {
+    max-width: 150px; /* Adjust size as needed */
+    margin-bottom: 1em; /* Space between logo and text */
+  }
+
+  .business-details .column:nth-of-type(2) {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the text */
+    justify-content: center; /* Center text vertically */
+    margin-bottom: 1em; /* Space between text and logo */
+    text-align: center; /* Center align the sentence */
+  }
+
+  .business-details .column:nth-of-type(3) {
+    order: 3; /* Ensure the list items are at the bottom */
+    width: 100%; /* Make it full width */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the list items */
+  }
+
+  .business-details .column {
+    flex: initial;
+    margin: 0.5em 0;
+  }
+
+  .business-details ul {
+    display: flex;
+    flex-direction: column;
+    align-items: left; /* Center the list items */
+    padding: 0;
+    margin: 0;
+    text-align: left; /* Keep list items text left-aligned */
+  }
+
+  .business-details ul li {
+    margin: 0.25em 0;
+    color: var(--color-white);
+  }
+
+  .business-details ul li strong {
+    color: var(--color-light-green); /* Highlighted text */
   }
 }
 
