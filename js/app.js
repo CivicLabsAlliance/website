@@ -5,6 +5,8 @@ document.getElementById('scrollToContact').addEventListener('click', function() 
 });
 
 
+document.getElementById('year').textContent = new Date().getFullYear();
+
 document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("contactForm").addEventListener("submit", async function(event) {
         event.preventDefault();
