@@ -1,41 +1,49 @@
-document.addEventListener('DOMContentLoaded', () => {
-    document.getElementById('contactForm').addEventListener('submit', function(event) {
+
+// Scroll to contact form
+document.getElementById('scrollToContact').addEventListener('click', function() {
+  document.querySelector('.contact').scrollIntoView({ behavior: 'smooth' });
+});
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById("contactForm").addEventListener("submit", async function(event) {
         event.preventDefault();
 
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const organization = document.getElementById('organization').value;
-        const message = document.getElementById('message').value;
+        // Gather form data
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const organization = document.getElementById("organization").value;
+        const message = document.getElementById("message").value;
 
-        console.log('Form Data:', { name, email, organization, message });
-
-        const data = {
+        // Create payload
+        const payload = {
             name: name,
             email: email,
-            organization: organization,
+            company: organization,
             message: message
         };
 
-        const url = 'https://script.google.com/macros/s/AKfycbw68tPyt3h8zI8KFyElUmsEmPhRwlrOJJU9nJgTqvguQU8tK7T8q7m97CMszNY5DloXdw/exec';
+        try {
+            // Send POST request to Cloudflare worker
+            const response = await fetch("https://contact-forms.civiclabs.us/api/contact", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(payload)
+            });
 
-        fetch(url, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(data)
-        })
-        .then(response => {
-            console.log('Fetch Response:', response);
-            return response.json();
-        })
-        .then(data => {
-            console.log('Response Data:', data);
-            alert('Form submitted successfully!');
-        })
-        .catch(error => {
-            console.error('Error:', error);
-            alert('There was an error submitting the form.');
-        });
+            if (response.status === 200) {
+                // Show success message
+                document.querySelector(".contact").innerHTML = "<p>Thanks for reaching out, we will be in touch shortly.</p>";
+            } else {
+                // Show error message
+                document.querySelector(".contact").innerHTML = "<p>There was an issue with your submission. Please try again later.</p>";
+            }
+        } catch (error) {
+            console.error("Error:", error);
+            // Show error message
+            document.querySelector(".contact").innerHTML = "<p>There was an issue with your submission. Please try again later.</p>";
+        }
     });
 });
