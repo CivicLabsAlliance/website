@@ -132,7 +132,50 @@ section {
   margin-bottom: 20px;
   max-width: 1000px; /* Ensure content boxes are not too wide */
   margin: 0 auto; /* Center the content */
+
 }
+
+@media (max-width: 768px) {
+
+  .section {
+    padding: 2em 1em;
+  }
+
+  header {
+    padding: 5em 0;
+  }
+
+  .wrapper {
+    max-width: 90%;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  h4 {
+    font-size: 1rem;
+  }
+
+  .capability-column {
+    flex-direction: column;
+  }
+
+  .business-details {
+    flex-direction: column;
+  }
+
+
+
+  .business-details .column {
+    margin: 1em 0;
+  }
+}
+
 
 /* 3. Header
 /* ---------------------------------------------------------- */
@@ -241,56 +284,28 @@ header .logo {
   .about p {
     max-width: 100%;
     margin-bottom: 2em;
+    text-align: justify;
   }
 
   .about .logos {
+    flex-direction: row; /* Align logos side by side */
+    justify-content: center; /* Center the logos */
     margin-left: 0;
   }
 
-  .section {
-    padding: 2em 1em;
+  .about .logos img {
+    max-width: 200px; /* Adjust size as needed */
   }
 
-  header {
-    padding: 5em 0;
+  .about .logos .logo-huntridge {
+    margin-right: 20px; /* Space between the logos */
   }
 
-  .wrapper {
-    max-width: 90%;
+  .about .logos .logo-civicactions {
+    margin-left: 20px; /* Space between the logos */
   }
 
-  h2 {
-    font-size: 2rem;
-  }
 
-  h3 {
-    font-size: 1.5rem;
-  }
-
-  h4 {
-    font-size: 1rem;
-  }
-
-  .capability-column {
-    flex-direction: column;
-  }
-
-  .business-details {
-    flex-direction: column;
-  }
-
-  .leader {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .leader-img {
-    margin-bottom: 1em;
-  }
-
-  .business-details .column {
-    margin: 1em 0;
-  }
 }
 
 /* 4.2 Capabilities
@@ -338,6 +353,12 @@ header .logo {
   font-size: var(--font-size-body);
 }
 
+/* Responsive Styles */
+@media (max-width: 768px) {
+
+
+}
+
 /* 5. Business Details
 /* ---------------------------------------------------------- */
 
@@ -350,14 +371,20 @@ header .logo {
   border-radius: 8px;
 }
 
+.business-details .logo-column {
+  display: flex;
+  align-items: flex-start; /* Vertically aligns image and text in columns */
+  margin-right: 20px; /* Space between the logo and text */
+}
+
 .business-details .column {
   flex: 1; /* Each column takes up equal space */
   margin: 0.5em; /* Add margin between columns */
 }
 
-.business-details .column img {
-  max-width: 100%; /* Ensure the image fits within the column */
-  height: auto; /* Maintain aspect ratio */
+.business-details .logo-column img {
+  max-width: 150px; /* Adjust size as needed to prevent blur */
+  margin-right: 20px;
 }
 
 .business-details ul {
@@ -374,6 +401,42 @@ header .logo {
 .business-details ul li strong {
   color: var(--color-light-green); /* Highlighted text */
 }
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .business-details {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .business-details .logo-column {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0em;
+  }
+
+  .business-details .logo-column img {
+    max-width: 130px; /* Adjust size as needed */
+    margin-right: 1em; /* Space between logo and text */
+  }
+
+  .business-details .column {
+    flex: initial;
+    margin: 0.5em 0;
+  }
+
+  .business-details ul {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10px;
+  }
+
+  .business-details ul li {
+    margin: 0.25em 0;
+    color: var(--color-white);
+  }
+}
+
 
 /* 6. Leadership
 /* ---------------------------------------------------------- */
@@ -437,6 +500,19 @@ header .logo {
   border-bottom-color: var(--color-light-yellow);
 }
 
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .leader {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .leader-img {
+    margin-bottom: 1em;
+  }
+}
+
+
 /* 7. Contact
 /* ---------------------------------------------------------- */
 
@@ -470,7 +546,7 @@ header .logo {
   border-radius: 4px;
   font-size: 1em;
   background-color: var(--color-dark-green);
-  color: var (--color-white);
+  color: var(--color-white);
   font-family: var(--font-family-text);
 }
 
@@ -497,11 +573,18 @@ header .logo {
   color: var(--color-dark-green);
 }
 
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+
+
+}
+
 /* 8. Footer
 /* ---------------------------------------------------------- */
 
 footer {
-  background-color: var(--color-dark-green);
+  background-color: var(--color-light-black);
   color: var(--color-white);
   text-align: center;
   padding: 2em 0;
@@ -515,6 +598,12 @@ footer img {
 
 footer p {
   margin: 0.5em 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+
+
 }
 
 /* 9. Views
