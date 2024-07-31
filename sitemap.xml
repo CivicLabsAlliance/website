@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/sitemap.xsl"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://civic-labs.ai/</loc>
+    <lastmod>2024-07-31</lastmod>
+    <priority>1.00</priority>
+  </url>
+  <url>
+    <loc>https://civic-labs.ai/privacy/</loc>
+    <lastmod>2024-07-31</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://civic-labs.ai/terms/</loc>
+    <lastmod>2024-07-31</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://civic-labs.ai/404/</loc>
+    <lastmod>2024-07-31</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://civic-labs.ai/security/</loc>
+    <lastmod>2024-07-31</lastmod>
+    <priority>0.80</priority>
+  </url>
+</urlset>
