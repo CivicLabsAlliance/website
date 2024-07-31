@@ -344,34 +344,62 @@ header .logo {
 
 .leadership {
   background-color: var(--color-black);
-  padding: 0.5em 2em;
-  border-radius: 40px;
-  max-width: 80%;
+  padding: 2em;
+  border-radius: 8px;
+  max-width: 1000px;
   margin: 0 auto;
-  margin-bottom: 15px;
-
 }
 
+.leadership h3 {
+  color: var(--color-light-green);
+  font-size: var(--font-size-h3);
+  margin-bottom: 1em;
+}
 
-.leadership .leader {
+.leader {
+  display: flex;
+  align-items: center;
   margin-bottom: 2em;
-  padding: 0 1em;
 }
 
-.leadership .leader h4 {
-
+.leader-img {
+  flex: 0 0 25%;
+  max-width: 25%;
+  margin-right: 2em;
 }
 
-.leadership .leader p {
-
-}
-
-
-.leadership .image-person {
+.image-person {
+  width: 100%;
   height: auto;
-  width: 50%;
+  border-radius: 8px;
 }
 
+.leader-details {
+  flex: 1;
+}
+
+.leader h4 {
+  margin-bottom: 0.5em;
+  color: var(--color-white);
+  font-size: var(--font-size-h4);
+}
+
+.leader p {
+  color: var(--color-white);
+  margin-bottom: 1em;
+}
+
+.link {
+  color: var(--color-light-green);
+  text-decoration: none;
+  border-bottom: 1px solid var(--color-light-green);
+  transition: color 0.3s, border-bottom-color 0.3s;
+}
+
+.link:hover {
+  color: var(--color-light-yellow);
+  border-bottom-color: var(--color-light-yellow);
+}
 
 /* 7. Contact
 /* ---------------------------------------------------------- */
@@ -383,10 +411,7 @@ header .logo {
 }
 
 .contact h3 {
-
   text-align: center;
-  font-size: var(--font-size-h3);
-  margin-bottom: 1em;
 }
 
 .contact form {
@@ -405,11 +430,12 @@ header .logo {
 .contact form textarea {
   padding: 0.5em;
   margin-top: 0.5em;
-  border: 1px solid var(--color-light-green);
+  border: 1px solid var(--color-white);
   border-radius: 4px;
   font-size: 1em;
   background-color: var(--color-dark-green);
   color: var(--color-white);
+  font-family: var(--font-family-text);
 }
 
 
