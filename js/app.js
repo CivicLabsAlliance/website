@@ -1,9 +1,7 @@
-
 // Scroll to contact form
 document.getElementById('scrollToContact').addEventListener('click', function() {
   document.querySelector('.contact').scrollIntoView({ behavior: 'smooth' });
 });
-
 
 document.getElementById('year').textContent = new Date().getFullYear();
 
@@ -17,12 +15,16 @@ document.addEventListener("DOMContentLoaded", function() {
         const organization = document.getElementById("organization").value;
         const message = document.getElementById("message").value;
 
+        // Gather Turnstile response
+        const turnstileResponse = document.querySelector('.cf-turnstile input[name="cf-turnstile-response"]').value;
+
         // Create payload
         const payload = {
             name: name,
             email: email,
             company: organization,
-            message: message
+            message: message,
+            "cf-turnstile-response": turnstileResponse
         };
 
         try {
