@@ -671,8 +671,26 @@ footer img {
   margin: 0.5em;
 }
 
+/* Footer container to keep a max width and center everything */
+.footer-container {
+  max-width: 800px; /* Adjust as needed */
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Spacing for the logos */
+.footer-logos {
+  margin: 1.5em 0;
+}
+
+/* Add extra spacing to the pledge if you want it to stand out */
+.footer-pledge {
+  margin-top: 1.5em;
+}
+
+/* Override your existing footer p margin if you want more vertical space */
 footer p {
-  margin: 0.5em 0;
+  margin: 1em 0; /* Increase spacing between lines */
 }
 
 /* Responsive Styles */
