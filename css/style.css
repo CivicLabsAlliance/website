@@ -394,6 +394,17 @@ header .logo {
   margin-right: 20px;
 }
 
+.business-details .logo-wrap {
+  display: flex;
+  gap: 1em;
+}
+
+.logo-sba,
+.logo-hubzone {
+  max-width: 150px;
+  height: auto;
+}
+
 .business-details ul {
   list-style-type: none;
   padding: 0;
@@ -408,6 +419,8 @@ header .logo {
 .business-details ul li strong {
   color: var(--color-light-green); /* Highlighted text */
 }
+
+
 
 /* Responsive Styles */
 @media (max-width: 768px) {
@@ -470,6 +483,12 @@ header .logo {
   .business-details ul li strong {
     color: var(--color-light-green); /* Highlighted text */
   }
+
+  .business-details .logo-wrap {
+    flex-direction: column;
+    align-items: center;
+  }
+
 }
 
 
